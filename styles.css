@@ -190,24 +190,41 @@ strong {
 }
 
 .lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   min-height: 34px;
   padding: 0 12px;
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px;
-  color: var(--paper-soft);
   font-size: 0.82rem;
   font-weight: 760;
   background: transparent;
   transition:
-    color 180ms ease,
     background 180ms ease,
     border-color 180ms ease;
 }
 
 .lang-toggle:hover {
-  color: var(--paper);
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.44);
+}
+
+.lang-opt {
+  color: rgba(246, 240, 230, 0.38);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition: color 180ms ease, font-weight 180ms ease;
+}
+
+.lang-sep {
+  color: rgba(246, 240, 230, 0.2);
+}
+
+html[data-lang="ko"] .lang-opt[data-opt="ko"],
+html[data-lang="en"] .lang-opt[data-opt="en"] {
+  color: var(--paper);
+  font-weight: 900;
 }
 
 .header-cta {
@@ -1009,7 +1026,7 @@ input[type="range"] {
    REVEAL ANIMATION
    ============================================================ */
 
-[data-reveal] {
+.js [data-reveal] {
   opacity: 0;
   transform: translateY(20px);
   transition:
@@ -1017,7 +1034,7 @@ input[type="range"] {
     transform 720ms ease;
 }
 
-[data-reveal].is-visible {
+.js [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
 }

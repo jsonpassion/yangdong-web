@@ -1,4 +1,7 @@
 
+/* JS 로드 확인 — reveal 애니메이션 활성화 */
+document.documentElement.classList.add('js');
+
 /* ============================================================
    TRANSLATIONS
    ============================================================ */
@@ -357,46 +360,20 @@ function setLanguage(lang) {
     }
   });
 
-  /* context-p1 has a child <strong> — handle leaf text nodes manually */
+  /* context-p1 has a child <strong> — use innerHTML for reliable switching */
   const p1 = document.querySelector("[data-i18n='context-p1']");
   if (p1) {
-    const strong = p1.querySelector("strong");
-    /* collect text nodes before and after the strong element */
-    const textBefore = [...p1.childNodes].find(
-      (n) => n.nodeType === Node.TEXT_NODE && n.nextSibling === strong,
-    ) || p1.childNodes[0];
-    const textAfter = [...p1.childNodes].find(
-      (n) => n.nodeType === Node.TEXT_NODE && n.previousSibling === strong,
-    ) || p1.childNodes[p1.childNodes.length - 1];
-
     if (lang === "ko") {
-      if (textBefore && textBefore.nodeType === Node.TEXT_NODE) {
-        textBefore.textContent = "양동마을은 하회마을과 함께 UNESCO 세계유산\u00a0";
-      }
-      if (strong) strong.textContent = "한국의 역사마을: 하회와 양동";
-      if (textAfter && textAfter.nodeType === Node.TEXT_NODE) {
-        textAfter.textContent =
-          "으로 등재된 역사마을입니다. 산세, 물길, 농경지, 정자, 고택이 이어지는 풍경은 공간을 보고 기록하는 커뮤니티 데이에 적합한 장면을 제공합니다.";
-      }
-      if (strong) strong.style.display = "";
+      p1.innerHTML =
+        "양동마을은 하회마을과 함께 UNESCO 세계유산\u00a0<strong>한국의 역사마을: 하회와 양동</strong>으로 등재된 역사마을입니다. 산세, 물길, 농경지, 정자, 고택이 이어지는 풍경은 공간을 보고 기록하는 커뮤니티 데이에 적합한 장면을 제공합니다.";
     } else {
-      /* in English, hide the strong and put all text in the before node */
-      if (textBefore && textBefore.nodeType === Node.TEXT_NODE) {
-        textBefore.textContent = t["context-p1"];
-      }
-      if (strong) {
-        strong.textContent = "";
-        strong.style.display = "none";
-      }
-      if (textAfter && textAfter.nodeType === Node.TEXT_NODE) {
-        textAfter.textContent = "";
-      }
+      p1.textContent = t["context-p1"];
     }
   }
 
   /* update active program card detail */
   const selectedCard = document.querySelector(".program-card.is-selected");
-  if (selectedCard) {
+  if (selectedCard && programLabel) {
     const key = selectedCard.dataset.program;
     const detail = programData[key];
     if (detail) {
@@ -410,7 +387,7 @@ function setLanguage(lang) {
 
   /* update active gallery tab copy */
   const activeTab = document.querySelector(".gallery-tabs button.is-active");
-  if (activeTab) {
+  if (activeTab && galleryCopy) {
     const key = activeTab.dataset.gallery;
     const detail = galleryData[key];
     if (detail) {
@@ -421,12 +398,6 @@ function setLanguage(lang) {
 
   /* update mission text */
   updateMission();
-
-  /* update toggle button label */
-  const toggleBtn = document.querySelector("#lang-toggle");
-  if (toggleBtn) {
-    toggleBtn.textContent = t["lang-toggle"];
-  }
 }
 
 /* ============================================================
@@ -629,13 +600,14 @@ if (langToggleBtn) {
    ============================================================ */
 
 const canvas = document.querySelector("#spatial-field");
-const context = canvas.getContext("2d");
+const ctx2d = canvas ? canvas.getContext("2d") : null;
 let width = 0;
 let height = 0;
 let points = [];
 let raf = 0;
 
 function resetCanvas() {
+  if (!canvas || !ctx2d) return;
   const ratio = window.devicePixelRatio || 1;
   width = window.innerWidth;
   height = window.innerHeight;
@@ -643,7 +615,7 @@ function resetCanvas() {
   canvas.height = Math.floor(height * ratio);
   canvas.style.width = `${width}px`;
   canvas.style.height = `${height}px`;
-  context.setTransform(ratio, 0, 0, ratio, 0, 0);
+  ctx2d.setTransform(ratio, 0, 0, ratio, 0, 0);
   points = Array.from({ length: Math.min(80, Math.floor(width / 18)) }, () => ({
     x: Math.random() * width,
     y: Math.random() * height,
@@ -655,8 +627,9 @@ function resetCanvas() {
 }
 
 function drawField() {
-  context.clearRect(0, 0, width, height);
-  context.lineWidth = 1;
+  if (!ctx2d) return;
+  ctx2d.clearRect(0, 0, width, height);
+  ctx2d.lineWidth = 1;
 
   points.forEach((point, index) => {
     point.x += point.vx;
@@ -666,20 +639,20 @@ function drawField() {
     if (point.y < -20) point.y = height + 20;
     if (point.y > height + 20) point.y = -20;
 
-    context.beginPath();
-    context.fillStyle = `rgba(${point.hue}, 0.5)`;
-    context.arc(point.x, point.y, point.r, 0, Math.PI * 2);
-    context.fill();
+    ctx2d.beginPath();
+    ctx2d.fillStyle = `rgba(${point.hue}, 0.5)`;
+    ctx2d.arc(point.x, point.y, point.r, 0, Math.PI * 2);
+    ctx2d.fill();
 
     for (let next = index + 1; next < points.length; next += 1) {
       const other = points[next];
       const distance = Math.hypot(point.x - other.x, point.y - other.y);
       if (distance > 130) continue;
-      context.beginPath();
-      context.strokeStyle = `rgba(246, 240, 230, ${0.12 * (1 - distance / 130)})`;
-      context.moveTo(point.x, point.y);
-      context.lineTo(other.x, other.y);
-      context.stroke();
+      ctx2d.beginPath();
+      ctx2d.strokeStyle = `rgba(246, 240, 230, ${0.12 * (1 - distance / 130)})`;
+      ctx2d.moveTo(point.x, point.y);
+      ctx2d.lineTo(other.x, other.y);
+      ctx2d.stroke();
     }
   });
 
