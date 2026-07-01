@@ -2,6 +2,14 @@
 /* JS 로드 확인 — reveal 애니메이션 활성화 */
 document.documentElement.classList.add('js');
 
+/* 뷰포트 내 요소는 즉시 표시 (JS 추가 후 첫 페인트 전에 동기 실행) */
+document.querySelectorAll('[data-reveal]').forEach((el) => {
+  const { top, bottom } = el.getBoundingClientRect();
+  if (top < window.innerHeight && bottom > 0) {
+    el.classList.add('is-visible');
+  }
+});
+
 /* ============================================================
    TRANSLATIONS
    ============================================================ */
@@ -414,9 +422,14 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.12 },
+  { threshold: 0.06 },
 );
-revealTargets.forEach((target) => revealObserver.observe(target));
+/* 아직 보이지 않는 요소만 관찰 (뷰포트 내 요소는 이미 처리됨) */
+revealTargets.forEach((target) => {
+  if (!target.classList.contains('is-visible')) {
+    revealObserver.observe(target);
+  }
+});
 
 /* ============================================================
    SCROLL PROGRESS & NAV STATE
