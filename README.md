@@ -14,7 +14,13 @@ Then visit `http://localhost:4173`.
 
 ## Application Form
 
-The form works without a backend by saving submissions temporarily in the browser. To connect a real application endpoint, set `APPLICATION_ENDPOINT` in `main.js`.
+The form validates the page inputs, saves a temporary browser backup, then opens the connected Airtable form:
+
+```text
+https://airtable.com/app31vwEVA3SAa2xN/pag68ZpguAeSyqtZf/form
+```
+
+Update `AIRTABLE_FORM_URL` in `main.js` if the Airtable form changes. The page also sends prefill query parameters based on `AIRTABLE_PREFILL_FIELDS`; adjust those labels if the Airtable field names differ.
 
 Expected payload:
 

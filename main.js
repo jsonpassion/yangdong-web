@@ -1,4 +1,11 @@
-const APPLICATION_ENDPOINT = "";
+const AIRTABLE_FORM_URL = "https://airtable.com/app31vwEVA3SAa2xN/pag68ZpguAeSyqtZf/form";
+const AIRTABLE_PREFILL_FIELDS = {
+  name: "이름",
+  email: "이메일",
+  affiliation: "소속 또는 역할",
+  experience: "Vision Pro 경험",
+  talk: "소개하고 싶은 앱 또는 관심 장면",
+};
 
 const programData = {
   shoot: {
@@ -209,6 +216,16 @@ assetButtons.forEach((button) => {
 const form = document.querySelector("#application-form");
 const formStatus = document.querySelector("#form-status");
 
+function buildAirtableFormUrl(payload) {
+  const url = new URL(AIRTABLE_FORM_URL);
+  Object.entries(AIRTABLE_PREFILL_FIELDS).forEach(([key, fieldName]) => {
+    if (payload[key]) {
+      url.searchParams.set(`prefill_${fieldName}`, payload[key]);
+    }
+  });
+  return url.toString();
+}
+
 function setInvalidState(formElement) {
   formElement.querySelectorAll(".is-invalid").forEach((item) => item.classList.remove("is-invalid"));
   const invalidControls = formElement.querySelectorAll(":invalid");
@@ -230,20 +247,11 @@ form?.addEventListener("submit", async (event) => {
   payload.createdAt = new Date().toISOString();
 
   try {
-    if (APPLICATION_ENDPOINT) {
-      const response = await fetch(APPLICATION_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      if (!response.ok) throw new Error("Request failed");
-      formStatus.textContent = "신청이 접수되었습니다.";
-    } else {
-      const saved = JSON.parse(localStorage.getItem("yangdong-applications") || "[]");
-      saved.push(payload);
-      localStorage.setItem("yangdong-applications", JSON.stringify(saved));
-      formStatus.textContent = "신청서가 이 브라우저에 임시 저장되었습니다.";
-    }
+    const saved = JSON.parse(localStorage.getItem("yangdong-applications") || "[]");
+    saved.push(payload);
+    localStorage.setItem("yangdong-applications", JSON.stringify(saved));
+    window.open(buildAirtableFormUrl(payload), "_blank", "noopener,noreferrer");
+    formStatus.textContent = "Airtable 신청폼을 새 탭으로 열었습니다.";
     form.reset();
   } catch {
     formStatus.textContent = "제출 중 문제가 발생했습니다. 잠시 후 다시 시도해주세요.";
