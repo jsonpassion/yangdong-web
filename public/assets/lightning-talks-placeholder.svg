@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Lightning talks placeholder</title>
+  <desc id="desc">Short app recommendation talks around a glowing screen.</desc>
+  <rect width="900" height="620" fill="#121410"/>
+  <rect x="240" y="98" width="420" height="270" rx="18" fill="#1f2f28" stroke="#78d6f4" stroke-opacity=".36"/>
+  <circle cx="450" cy="232" r="80" fill="none" stroke="#d8ad5b" stroke-opacity=".45" stroke-width="3"/>
+  <circle cx="450" cy="232" r="42" fill="#78d6f4" opacity=".28"/>
+  <g fill="#f6f0e6" opacity=".75">
+    <circle cx="180" cy="470" r="34"/>
+    <circle cx="320" cy="470" r="34"/>
+    <circle cx="580" cy="470" r="34"/>
+    <circle cx="720" cy="470" r="34"/>
+  </g>
+  <g stroke="#f6f0e6" stroke-opacity=".28" stroke-width="4">
+    <path d="M180 436v-52h112"/>
+    <path d="M320 436v-64h72"/>
+    <path d="M580 436v-64h-72"/>
+    <path d="M720 436v-52H608"/>
+  </g>
+  <text x="72" y="86" fill="#f6f0e6" font-family="system-ui, sans-serif" font-size="32" font-weight="800">public/assets/lightning-talks.jpg</text>
+</svg>

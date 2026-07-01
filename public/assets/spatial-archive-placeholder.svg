@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" role="img" aria-labelledby="title desc">
+  <title id="title">Spatial archive placeholder</title>
+  <desc id="desc">A networked archive of places, scenes, and community notes.</desc>
+  <rect width="1100" height="720" fill="#12110f"/>
+  <g fill="none" stroke="#f6f0e6" stroke-opacity=".18">
+    <path d="M180 190 458 310 710 160 902 410 540 534 180 190Z"/>
+    <path d="M458 310 540 534"/>
+    <path d="M710 160 540 534"/>
+    <path d="M902 410 458 310"/>
+  </g>
+  <g>
+    <circle cx="180" cy="190" r="54" fill="#d8ad5b" opacity=".78"/>
+    <circle cx="458" cy="310" r="70" fill="#78d6f4" opacity=".58"/>
+    <circle cx="710" cy="160" r="48" fill="#96c5ad" opacity=".7"/>
+    <circle cx="902" cy="410" r="62" fill="#c86a50" opacity=".68"/>
+    <circle cx="540" cy="534" r="76" fill="#f6f0e6" opacity=".12" stroke="#f6f0e6" stroke-opacity=".26"/>
+  </g>
+  <text x="92" y="642" fill="#f6f0e6" font-family="system-ui, sans-serif" font-size="32" font-weight="800">public/assets/spatial-archive-cover.jpg</text>
+</svg>

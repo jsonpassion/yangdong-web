@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Vision Pro workshop placeholder</title>
+  <desc id="desc">A workshop table with spatial capture frames and Vision Pro silhouettes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1d2b24"/>
+      <stop offset=".55" stop-color="#171311"/>
+      <stop offset="1" stop-color="#0f1110"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" fill="url(#bg)"/>
+  <rect x="86" y="396" width="728" height="92" rx="8" fill="#8a5935"/>
+  <rect x="130" y="248" width="190" height="112" rx="56" fill="none" stroke="#f6f0e6" stroke-opacity=".65" stroke-width="8"/>
+  <rect x="580" y="248" width="190" height="112" rx="56" fill="none" stroke="#f6f0e6" stroke-opacity=".65" stroke-width="8"/>
+  <path d="M318 305c72-46 190-46 264 0" fill="none" stroke="#f6f0e6" stroke-opacity=".45" stroke-width="10" stroke-linecap="round"/>
+  <g fill="none" stroke="#78d6f4" stroke-opacity=".36">
+    <rect x="242" y="118" width="416" height="260" rx="20"/>
+    <rect x="284" y="154" width="332" height="188" rx="16"/>
+    <path d="M332 248h236M450 177v142"/>
+  </g>
+  <circle cx="450" cy="248" r="8" fill="#d8ad5b"/>
+  <text x="72" y="86" fill="#f6f0e6" font-family="system-ui, sans-serif" font-size="32" font-weight="800">public/assets/vision-pro-workshop.jpg</text>
+</svg>

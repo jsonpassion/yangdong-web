@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Spatial walk placeholder</title>
+  <desc id="desc">A village alley with depth markers for a spatial walk.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#314833"/>
+      <stop offset=".6" stop-color="#191c17"/>
+      <stop offset="1" stop-color="#11100e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" fill="url(#bg)"/>
+  <path d="M0 620 390 260h120l390 360Z" fill="#746047"/>
+  <path d="M450 265v355" stroke="#d8ad5b" stroke-opacity=".48" stroke-width="5"/>
+  <path d="M95 352h220l-110-68Z" fill="#6b3b28"/>
+  <rect x="126" y="352" width="158" height="120" fill="#d8bd83"/>
+  <path d="M595 330h236l-118-74Z" fill="#653625"/>
+  <rect x="628" y="330" width="170" height="136" fill="#ccb17b"/>
+  <g fill="none" stroke="#78d6f4" stroke-opacity=".38">
+    <ellipse cx="450" cy="318" rx="92" ry="28"/>
+    <ellipse cx="450" cy="410" rx="178" ry="50"/>
+    <ellipse cx="450" cy="530" rx="292" ry="76"/>
+  </g>
+  <text x="72" y="86" fill="#f6f0e6" font-family="system-ui, sans-serif" font-size="32" font-weight="800">public/assets/spatial-walk-route.jpg</text>
+</svg>
