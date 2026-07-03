@@ -28,7 +28,7 @@ const translations = {
     "hero-h1-line2": "Experiences:",
     "hero-h1-place": "Yangdong Village",
     "hero-lead":
-      "양동마을의 골목, 처마, 사람을 Vision Pro로 기록하는 하루. 배움에서 산책, 감상, 라이트닝 토크까지 하나의 커뮤니티 프로젝트로 이어집니다.",
+      "양동마을의 골목, 처마, 사람을 공간 콘텐츠로 기록하는 하루. 배움에서 산책, 감상, 라이트닝 토크까지 하나의 커뮤니티 프로젝트로 이어집니다.",
     "btn-apply": "신청하기",
     "btn-flow": "흐름 보기",
 
@@ -38,15 +38,15 @@ const translations = {
     "fact-place-label": "장소",
     "fact-place-value": "경주 양동마을",
     "fact-output-label": "결과물",
-    "fact-output-value": "Shared album 또는 간단한 앱",
+    "fact-output-value": "Spatial Video, Spatial Photo, Panorama, etc",
     "fact-date-label": "날짜",
-    "fact-date-value": "미정",
+    "fact-date-value": "7.11 Sat",
 
     /* context */
     "context-kicker": "계획 배경",
     "context-h2": "오래된 마을을 새 공간 경험의 출발점으로",
     "context-p1":
-      "양동마을은 하회마을과 함께 UNESCO 세계유산 한국의 역사마을: 하회와 양동으로 등재된 역사마을입니다. 산세, 물길, 농경지, 정자, 고택이 이어지는 풍경은 공간을 보고 기록하는 커뮤니티 데이에 적합한 장면을 제공합니다.",
+      "양동마을은 하회마을과 함께 UNESCO에 등재된 세계유산입니다. 산세, 물길, 농경지, 정자, 고택이 이어지는 풍경은 공간을 보고 기록하는 커뮤니티 데이에 적합한 장면들을 제공합니다.",
     "context-p1-strong": "한국의 역사마을: 하회와 양동",
     "context-p2":
       "국내 Vision Pro 생태계는 아직 함께 배우고, 실험하고, 결과물을 남기는 커뮤니티 경험이 충분하지 않습니다. 이 행사는 사용법을 넘어 각자가 본 장면을 공유 가능한 공간 콘텐츠로 남기는 것을 목표로 합니다.",
@@ -59,57 +59,19 @@ const translations = {
     "flow-lead":
       "참가자는 짧게 익히고, 현장에서 걸으며 촬영하고, 함께 감상한 뒤, 각자가 잘 쓰는 앱과 아이디어를 나눕니다.",
     "flow-step1-copy":
-      "공간 사진과 비디오 촬영의 기본을 빠르게 맞춥니다. 피사체와의 거리, 움직임, 사람을 담는 방식, 깊이감을 짚고 바로 현장으로 나갑니다.",
+      "공간 사진과 비디오 촬영, 파노라마 촬영 방법을 익힙니다.",
     "flow-step2-copy":
-      "오늘의 챌린지는 "가장 양동마을다운 순간". 골목의 깊이, 기와의 반복, 나무와 담장의 거리감을 각자의 시선으로 기록합니다.",
+      "오늘의 챌린지가 제공됩니다.",
     "flow-step3-copy":
-      "서로의 작품을 감상하며 어떤 공간 단서가 몰입감을 만들었는지 이야기합니다. 결과물은 공유 앨범 또는 간단한 앱의 형태로 남깁니다.",
+      "서로의 작품을 감상하며 어떤 공간 단서가 몰입감을 만들었는지 이야기합니다.",
     "flow-step4-copy":
       "가장 잘 활용하는 앱 하나씩을 소개하고, 다음 커뮤니티 프로젝트로 확장할 아이디어를 모읍니다.",
-
-    /* program */
-    "program-kicker": "프로그램",
-    "program-h2": "배우고, 걷고, 남기는 프로그램",
-    "program-lead": "각 활동은 다음 활동의 재료가 되도록 설계했습니다.",
-    "prog-shoot-title": "촬영 감각 맞추기",
-    "prog-shoot-sub": "Spatial photo & video tips",
-    "prog-walk-title": "마을 산책 챌린지",
-    "prog-walk-sub": "Capture the Yangdong moment",
-    "prog-share-title": "공유 갤러리",
-    "prog-share-sub": "Review and collect scenes",
-    "prog-talk-title": "앱 라이트닝 토크",
-    "prog-talk-sub": "Three-minute recommendations",
-
-    /* challenge */
-    "challenge-kicker": "현장 챌린지",
-    "challenge-h2": ""가장 양동마을다운 순간"을 고르는 기준",
-    "challenge-lead":
-      "좋은 공간 콘텐츠는 멋진 피사체 하나보다 장면 사이의 관계를 잘 드러냅니다. 참가자는 아래 감각을 조합해 자신의 산책 미션을 정합니다.",
-    "mood-depth": "깊이감",
-    "mood-heritage": "마을성",
-    "mood-motion": "사람의 움직임",
-    "mission-label": "추천 미션",
-
-    /* gallery */
-    "gallery-kicker": "결과물",
-    "gallery-h2": "행사 이후에도 남는 하나의 커뮤니티 프로젝트",
-    "gallery-copy-album":
-      "첫 결과물은 공유 앨범으로 시작하고, 다음 회차에는 간단한 웹앱 또는 공간 콘텐츠 아카이브로 확장할 수 있습니다.",
-    "tab-album": "Shared album",
-    "tab-app": "Mini app",
-    "tab-archive": "Spatial archive",
 
     /* apply */
     "apply-kicker": "참가 신청",
     "apply-h2": "지금 신청하세요.",
     "apply-lead":
-      "VisionOS에 관심이 있고 기본 사용법을 알고 있다면 참여할 수 있습니다. 촬영 경험보다 공간을 관찰하고 공유하려는 태도를 우선합니다.",
-
-    /* assets */
-    "assets-kicker": "운영 가이드",
-    "assets-h2": "실제 사진과 영상으로 교체할 자리",
-    "assets-lead":
-      "현재는 플레이스홀더로 구성했습니다. 아래 이름으로 파일을 추가하면 페이지 맥락을 유지한 채 실제 행사 톤으로 바꿀 수 있습니다.",
+      "visionOS, 비전 프로, 공간 콘텐츠에 관심이 있다면 참여할 수 있습니다",
 
     /* footer */
     "footer-title": "Dive into Spatial Experiences: Yangdong Village",
@@ -129,7 +91,7 @@ const translations = {
     "hero-h1-line2": "Experiences:",
     "hero-h1-place": "Yangdong Village",
     "hero-lead":
-      "One day in a UNESCO heritage village — shooting spatial photos and video with Vision Pro. Learn, walk, share, and talk. One community project, start to finish.",
+      "A day of capturing the alleyways, eaves, and people of Yangdong Village as spatial content. From learning and strolling to viewing and lightning talks — all connected as one community project.",
     "btn-apply": "Apply Now",
     "btn-flow": "See the Flow",
 
@@ -139,15 +101,15 @@ const translations = {
     "fact-place-label": "Location",
     "fact-place-value": "Yangdong Village, Gyeongju",
     "fact-output-label": "Output",
-    "fact-output-value": "Shared album or mini app",
+    "fact-output-value": "Spatial Video, Spatial Photo, Panorama, etc",
     "fact-date-label": "Date",
-    "fact-date-value": "TBD",
+    "fact-date-value": "7.11 Sat",
 
     /* context */
     "context-kicker": "Background",
     "context-h2": "An ancient village as the starting point for new spatial experiences",
     "context-p1":
-      "Yangdong Village is a UNESCO World Heritage Site — listed alongside Hahoe as Historic Villages of Korea. Rolling hills, waterways, pavilions, and traditional houses make it a perfect setting for a community day built around seeing and capturing space.",
+      "Yangdong Village is a UNESCO World Heritage Site, designated alongside Hahoe Village. The landscape — where mountains, waterways, farmland, pavilions, and historic houses flow together — offers scenes perfectly suited for a community day of seeing and capturing space.",
     "context-p1-strong": "Historic Villages of Korea: Hahoe and Yangdong",
     "context-p2":
       "Korea's Vision Pro ecosystem still lacks enough shared community experiences — spaces to learn together, experiment, and leave something behind. This event goes beyond tutorials: we want everyone to turn what they see into spatial content worth sharing.",
@@ -160,58 +122,20 @@ const translations = {
     "flow-lead":
       "Learn fast, shoot on the move, review together, then share the apps and ideas that could power the next project.",
     "flow-step1-copy":
-      "Quick alignment on spatial photo and video fundamentals. Distance, motion, layering, depth — get the basics synced before heading out.",
+      "Learn how to capture spatial photos and videos, and take panoramic shots.",
     "flow-step2-copy":
-      "Today's challenge: the most Yangdong moment. Alley depth, repeating roof tiles, distance through gates — find it through your own lens.",
+      "You'll receive today's challenge.",
     "flow-step3-copy":
-      "Review each other's work and talk through what spatial cues created immersion. Output lives as a shared album or small app.",
+      "View each other's work and discuss what spatial cues created a sense of immersion.",
     "flow-step4-copy":
       "Each person recommends one app they use best. Gather the seeds for the next community project.",
-
-    /* program */
-    "program-kicker": "Program",
-    "program-h2": "Learn, walk, and leave something behind",
-    "program-lead": "Each activity feeds directly into the next.",
-    "prog-shoot-title": "Shoot Calibration",
-    "prog-shoot-sub": "Spatial photo & video tips",
-    "prog-walk-title": "Village Walk Challenge",
-    "prog-walk-sub": "Capture the Yangdong moment",
-    "prog-share-title": "Shared Gallery",
-    "prog-share-sub": "Review and collect scenes",
-    "prog-talk-title": "App Lightning Talks",
-    "prog-talk-sub": "Three-minute recommendations",
-
-    /* challenge */
-    "challenge-kicker": "Field Challenge",
-    "challenge-h2": "How to find the most Yangdong moment",
-    "challenge-lead":
-      "Great spatial content reveals relationships between elements — not just a beautiful subject. Mix the sliders below to define your personal walk mission.",
-    "mood-depth": "Depth",
-    "mood-heritage": "Village feel",
-    "mood-motion": "Human movement",
-    "mission-label": "Recommended mission",
-
-    /* gallery */
-    "gallery-kicker": "Output",
-    "gallery-h2": "One community project that outlasts the day",
-    "gallery-copy-album":
-      "Start with a shared album, then expand to a small interactive web app or spatial content archive in a future session.",
-    "tab-album": "Shared album",
-    "tab-app": "Mini app",
-    "tab-archive": "Spatial archive",
 
     /* apply */
     "apply-kicker": "Apply",
     "apply-h2": "Apply now.",
     "apply-lead":
-      "If you own a Vision Pro and know the basics, you're in. We care more about curiosity and willingness to share than shooting experience.",
-
-    /* assets */
-    "assets-kicker": "Operations Guide",
-    "assets-h2": "Placeholder slots for real photos and video",
-    "assets-lead":
-      "Currently built with placeholders. Drop files at the paths below and the page updates to match actual event tone — no code changes needed.",
-
+      "If you're interested in visionOS, Vision Pro, or spatial content, you're welcome to join.",
+      
     /* footer */
     "footer-title": "Dive into Spatial Experiences: Yangdong Village",
     "footer-top": "Back to top",
@@ -368,16 +292,9 @@ function setLanguage(lang) {
     }
   });
 
-  /* context-p1 has a child <strong> — use innerHTML for reliable switching */
+  /* context-p1 — plain text (strong 제거됨) */
   const p1 = document.querySelector("[data-i18n='context-p1']");
-  if (p1) {
-    if (lang === "ko") {
-      p1.innerHTML =
-        "양동마을은 하회마을과 함께 UNESCO 세계유산\u00a0<strong>한국의 역사마을: 하회와 양동</strong>으로 등재된 역사마을입니다. 산세, 물길, 농경지, 정자, 고택이 이어지는 풍경은 공간을 보고 기록하는 커뮤니티 데이에 적합한 장면을 제공합니다.";
-    } else {
-      p1.textContent = t["context-p1"];
-    }
-  }
+  if (p1) p1.textContent = t["context-p1"];
 
   /* update active program card detail */
   const selectedCard = document.querySelector(".program-card.is-selected");
