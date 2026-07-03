@@ -74,8 +74,10 @@ const translations = {
     "guide-item1-body": "행사 당일 집합 장소와 시간은 신청 완료 후 초대되는 오픈 카카오톡 방에서 안내됩니다.",
     "guide-item2-title": "지참",
     "guide-item2-body": "야외 활동을 위한 준비(편한 신발, 선글라스 등)",
-    "guide-item3-title": "마을 예절",
-    "guide-item3-body": "양동마을은 주민이 실거주하는 세계유산 마을입니다. 사유지와 주거 공간은 조용히 존중해주세요.",
+    "guide-item3-title": "공유 앨범",
+    "guide-item3-body": "참가 확정 후 공유 앨범 초대 링크를 발송합니다. 당일 촬영 전 수락 부탁드립니다.",
+    "guide-item4-title": "마을 예절",
+    "guide-item4-body": "양동마을은 주민이 실거주하는 세계유산 마을입니다. 사유지와 주거 공간은 조용히 존중해주세요.",
 
     /* apply */
     "apply-kicker": "참가 신청",
@@ -147,8 +149,10 @@ const translations = {
     "guide-item1-body": "The meeting point and time on the day of the event will be announced in the open KakaoTalk group chat you'll be invited to after completing your registration.",
     "guide-item2-title": "What to bring",
     "guide-item2-body": "Prepare for outdoor activities (comfortable shoes, sunglasses, etc.)",
-    "guide-item3-title": "Village etiquette",
-    "guide-item3-body": "Yangdong is a UNESCO World Heritage village with residents living there. Please respect private land and residential areas quietly.",
+    "guide-item3-title": "Shared album",
+    "guide-item3-body": "After your registration is confirmed, we'll send you an invite link to the shared album. Please accept it before shooting on the day.",
+    "guide-item4-title": "Village etiquette",
+    "guide-item4-body": "Yangdong is a UNESCO World Heritage village with residents living there. Please respect private land and residential areas quietly.",
 
     /* apply */
     "apply-kicker": "Apply",
