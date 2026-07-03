@@ -449,7 +449,7 @@ html[data-lang="en"] .lang-opt[data-opt="en"] {
 .guide-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
+  gap: 12px;
   margin: 0;
   padding: 0;
 }
@@ -509,11 +509,8 @@ html[data-lang="en"] .lang-opt[data-opt="en"] {
    CONTEXT SECTION
    ============================================================ */
 
-.challenge {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.88fr);
-  gap: 42px;
-  align-items: center;
+.context-copy {
+  max-width: 820px;
 }
 
 .context-copy h2,
@@ -702,6 +699,11 @@ html[data-lang="en"] .lang-opt[data-opt="en"] {
 
 .section-heading {
   max-width: 820px;
+}
+
+.section-heading .section-kicker,
+.context-copy .section-kicker {
+  margin-bottom: 22px;
 }
 
 .program-grid {

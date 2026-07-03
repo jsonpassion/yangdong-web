@@ -17,7 +17,7 @@ document.querySelectorAll('[data-reveal]').forEach((el) => {
 const translations = {
   ko: {
     /* header */
-    "nav-context": "맥락",
+    "nav-context": "배경",
     "nav-program": "프로그램",
     "nav-apply": "신청",
     "header-cta": "참가 신청",
@@ -43,7 +43,7 @@ const translations = {
     "fact-date-value": "7.11 Sat",
 
     /* context */
-    "context-kicker": "계획 배경",
+    "context-kicker": "기획 배경",
     "context-h2": "오래된 마을을 새 공간 경험의 출발점으로",
     "context-p1":
       "양동마을은 하회마을과 함께 UNESCO에 등재된 세계유산입니다. 산세, 물길, 농경지, 정자, 고택이 이어지는 풍경은 공간을 보고 기록하는 커뮤니티 데이에 적합한 장면들을 제공합니다.",
@@ -92,7 +92,7 @@ const translations = {
 
   en: {
     /* header */
-    "nav-context": "Context",
+    "nav-context": "Background",
     "nav-program": "Program",
     "nav-apply": "Apply",
     "header-cta": "Apply Now",
@@ -118,7 +118,7 @@ const translations = {
     "fact-date-value": "7.11 Sat",
 
     /* context */
-    "context-kicker": "Background",
+    "context-kicker": "Project Background",
     "context-h2": "An ancient village as the starting point for new spatial experiences",
     "context-p1":
       "Yangdong Village is a UNESCO World Heritage Site, designated alongside Hahoe Village. The landscape — where mountains, waterways, farmland, pavilions, and historic houses flow together — offers scenes perfectly suited for a community day of seeing and capturing space.",
