@@ -67,17 +67,15 @@ const translations = {
     "flow-step4-copy":
       "가장 잘 활용하는 앱 하나씩을 소개하고, 다음 커뮤니티 프로젝트로 확장할 아이디어를 모읍니다.",
 
-    /* guide */
+    /* guide (03) */
     "guide-kicker": "운영 가이드",
     "guide-h2": "당일을 준비하는 체크리스트",
     "guide-item1-title": "집합",
-    "guide-item1-body": "행사 당일 집합 장소와 시간은 신청 완료 후 안내 메일로 전달됩니다.",
+    "guide-item1-body": "행사 당일 집합 장소와 시간은 신청 완료 후 초대되는 오픈 카카오톡 방에서 안내됩니다.",
     "guide-item2-title": "지참",
-    "guide-item2-body": "Vision Pro 본체와 충전 케이블, 야외 이동이 편한 신발. 배터리 풀 충전 권장.",
-    "guide-item3-title": "공유 앨범",
-    "guide-item3-body": "참가 확정 후 공유 앨범 초대 링크를 발송합니다. 당일 촬영 전 수락 부탁드립니다.",
-    "guide-item4-title": "마을 예절",
-    "guide-item4-body": "양동마을은 주민이 실거주하는 세계유산 마을입니다. 사유지와 주거 공간은 조용히 존중해주세요.",
+    "guide-item2-body": "야외 활동을 위한 준비(편한 신발, 선글라스 등)",
+    "guide-item3-title": "마을 예절",
+    "guide-item3-body": "양동마을은 주민이 실거주하는 세계유산 마을입니다. 사유지와 주거 공간은 조용히 존중해주세요.",
 
     /* apply */
     "apply-kicker": "참가 신청",
@@ -146,13 +144,11 @@ const translations = {
     "guide-kicker": "Operations Guide",
     "guide-h2": "Day-of checklist",
     "guide-item1-title": "Meetup",
-    "guide-item1-body": "Meeting location and time will be sent by email after your registration is confirmed.",
+    "guide-item1-body": "The meeting point and time on the day of the event will be announced in the open KakaoTalk group chat you'll be invited to after completing your registration.",
     "guide-item2-title": "What to bring",
-    "guide-item2-body": "Vision Pro and charging cable, comfortable shoes for outdoor walking. Full battery charge recommended.",
-    "guide-item3-title": "Shared album",
-    "guide-item3-body": "A shared album invite will be sent after registration. Please accept before shooting starts on the day.",
-    "guide-item4-title": "Village etiquette",
-    "guide-item4-body": "Yangdong is a UNESCO World Heritage village with residents living there. Please respect private land and residential areas quietly.",
+    "guide-item2-body": "Prepare for outdoor activities (comfortable shoes, sunglasses, etc.)",
+    "guide-item3-title": "Village etiquette",
+    "guide-item3-body": "Yangdong is a UNESCO World Heritage village with residents living there. Please respect private land and residential areas quietly.",
 
     /* apply */
     "apply-kicker": "Apply",
@@ -163,132 +159,6 @@ const translations = {
     /* footer */
     "footer-title": "Dive into Spatial Experiences: Yangdong Village",
     "footer-top": "Back to top",
-  },
-};
-
-/* ============================================================
-   BILINGUAL PROGRAM DATA
-   ============================================================ */
-
-const programData = {
-  shoot: {
-    ko: {
-      label: "Spatial photo & video tips",
-      heading: "공간감은 거리와 움직임에서 시작됩니다.",
-      copy: "촬영 전에 피사체와의 거리, 사람의 움직임, 앞뒤 레이어를 확인합니다. 짧은 체크인으로 참가자 간 기본 감각을 맞춥니다.",
-      alt: "Vision Pro 촬영 워크숍 장면 플레이스홀더",
-    },
-    en: {
-      label: "Spatial photo & video tips",
-      heading: "Depth starts with distance and motion.",
-      copy: "Before shooting: check subject distance, human movement, and front-to-back layering. A short sync session aligns everyone before heading out.",
-      alt: "Vision Pro workshop scene placeholder",
-    },
-    image: "public/assets/vision-pro-workshop-placeholder.svg",
-  },
-  walk: {
-    ko: {
-      label: "Capture the Yangdong moment",
-      heading: "양동마을다운 순간을 각자의 시선으로 찾습니다.",
-      copy: "경사와 골목, 기와의 반복, 담장 너머 풍경을 따라 걸으며 오늘의 챌린지 장면을 수집합니다.",
-      alt: "양동마을 공간 산책 장면 플레이스홀더",
-    },
-    en: {
-      label: "Capture the Yangdong moment",
-      heading: "Find your version of the most Yangdong moment.",
-      copy: "Walk the slope and alleys. Follow repeating roof tiles, look past walls. Collect scenes that answer today's challenge through your own eye.",
-      alt: "Spatial walk in Yangdong Village placeholder",
-    },
-    image: "public/assets/spatial-walk-placeholder.svg",
-  },
-  share: {
-    ko: {
-      label: "Review and collect scenes",
-      heading: "서로의 장면을 보며 몰입의 단서를 언어로 바꿉니다.",
-      copy: "결과물을 함께 보며 거리, 깊이, 움직임, 사람의 위치가 어떤 공간감을 만들었는지 이야기합니다.",
-      alt: "공유 갤러리 결과물 플레이스홀더",
-    },
-    en: {
-      label: "Review and collect scenes",
-      heading: "Put immersion into words by watching each other's work.",
-      copy: "Watch the shots together and talk through how distance, depth, movement, and framing combined to create spatial feel.",
-      alt: "Shared gallery output placeholder",
-    },
-    image: "public/assets/shared-gallery-placeholder.svg",
-  },
-  talk: {
-    ko: {
-      label: "Three-minute recommendations",
-      heading: "다음 실험을 만들 앱과 아이디어를 공유합니다.",
-      copy: "참가자마다 가장 잘 활용하는 앱 하나를 소개하고 다음 커뮤니티 프로젝트의 씨앗을 모읍니다.",
-      alt: "라이트닝 토크 장면 플레이스홀더",
-    },
-    en: {
-      label: "Three-minute recommendations",
-      heading: "Share the apps and ideas that fuel the next experiment.",
-      copy: "One app per person — the one you use best. Collect the seeds for the next community project before leaving.",
-      alt: "Lightning talks scene placeholder",
-    },
-    image: "public/assets/lightning-talks-placeholder.svg",
-  },
-};
-
-/* ============================================================
-   BILINGUAL GALLERY DATA
-   ============================================================ */
-
-const galleryData = {
-  album: {
-    ko: {
-      copy: "첫 결과물은 공유 앨범으로 시작하고, 다음 회차에는 간단한 웹앱 또는 공간 콘텐츠 아카이브로 확장할 수 있습니다.",
-      alt: "공유 앨범 플레이스홀더",
-    },
-    en: {
-      copy: "Start with a shared album. Next session can grow into a small interactive web app or spatial archive.",
-      alt: "Shared album placeholder",
-    },
-    image: "public/assets/shared-gallery-placeholder.svg",
-  },
-  app: {
-    ko: {
-      copy: "참가자가 고른 장면, 촬영 팁, 앱 추천을 모아 작은 인터랙티브 웹앱으로 남길 수 있습니다.",
-      alt: "미니 앱 결과물 플레이스홀더",
-    },
-    en: {
-      copy: "Gather curated scenes, shooting tips, and app picks into a small interactive web app that lives on past the day.",
-      alt: "Mini app output placeholder",
-    },
-    image: "public/assets/mini-app-placeholder.svg",
-  },
-  archive: {
-    ko: {
-      copy: "장소별 장면, 촬영 메모, 회차별 챌린지를 연결하면 VisionOS 커뮤니티의 지속 가능한 아카이브가 됩니다.",
-      alt: "스페이셜 아카이브 플레이스홀더",
-    },
-    en: {
-      copy: "Link scenes by location, shooting notes, and session challenges to build a living archive for the VisionOS community.",
-      alt: "Spatial archive placeholder",
-    },
-    image: "public/assets/spatial-archive-placeholder.svg",
-  },
-};
-
-/* ============================================================
-   BILINGUAL MISSION TEXT
-   ============================================================ */
-
-const missionTexts = {
-  ko: {
-    depthAndMotion: "사람이 골목을 통과하는 순간, 앞뒤 레이어가 겹치는 위치에서 촬영해보세요.",
-    heritageAndDepth: "기와, 담장, 산세가 한 프레임 안에서 단계적으로 깊어지는 장면을 찾아보세요.",
-    lowMotion: "정적인 고택과 마당의 여백을 중심에 두고 천천히 시선을 이동해보세요.",
-    default: "골목의 깊이와 처마선 사이로 사람이 지나가는 순간을 담아보세요.",
-  },
-  en: {
-    depthAndMotion: "Shoot the moment a person moves through the alley where the front and back layers overlap.",
-    heritageAndDepth: "Find a frame where roof tiles, walls, and hillside deepen in clear stages.",
-    lowMotion: "Center on the stillness of a traditional house and its courtyard — let your gaze move slowly.",
-    default: "Capture someone passing between the alley depth and the roofline.",
   },
 };
 
@@ -319,32 +189,6 @@ function setLanguage(lang) {
   /* context-p1 — plain text (strong 제거됨) */
   const p1 = document.querySelector("[data-i18n='context-p1']");
   if (p1) p1.textContent = t["context-p1"];
-
-  /* update active program card detail */
-  const selectedCard = document.querySelector(".program-card.is-selected");
-  if (selectedCard && programLabel) {
-    const key = selectedCard.dataset.program;
-    const detail = programData[key];
-    if (detail) {
-      const d = detail[lang];
-      programLabel.textContent = d.label;
-      programHeading.textContent = d.heading;
-      programCopy.textContent = d.copy;
-    }
-  }
-
-  /* update active gallery tab copy */
-  const activeTab = document.querySelector(".gallery-tabs button.is-active");
-  if (activeTab && galleryCopy) {
-    const key = activeTab.dataset.gallery;
-    const detail = galleryData[key];
-    if (detail) {
-      galleryCopy.textContent = detail[lang].copy;
-    }
-  }
-
-  /* update mission text */
-  updateMission();
 }
 
 /* ============================================================
@@ -434,79 +278,6 @@ const flowObserver = new IntersectionObserver(
   { rootMargin: "-35% 0px -45% 0px", threshold: 0.08 },
 );
 flowSteps.forEach((step) => flowObserver.observe(step));
-
-/* ============================================================
-   PROGRAM CARDS
-   ============================================================ */
-
-const programButtons = document.querySelectorAll(".program-card");
-const programLabel = document.querySelector("#program-label");
-const programHeading = document.querySelector("#program-heading");
-const programCopy = document.querySelector("#program-copy");
-
-programButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const detail = programData[button.dataset.program];
-    if (!detail) return;
-
-    programButtons.forEach((item) => item.classList.remove("is-selected"));
-    button.classList.add("is-selected");
-
-    const d = detail[currentLang];
-    programLabel.textContent = d.label;
-    programHeading.textContent = d.heading;
-    programCopy.textContent = d.copy;
-  });
-});
-
-/* ============================================================
-   CHALLENGE SLIDERS & MISSION TEXT
-   ============================================================ */
-
-const moodInputs = document.querySelectorAll("[data-mood]");
-const missionText = document.querySelector("#mission-text");
-
-function updateMission() {
-  const values = [...moodInputs].reduce((result, input) => {
-    result[input.dataset.mood] = Number(input.value);
-    return result;
-  }, {});
-
-  const mt = missionTexts[currentLang];
-  if (values.depth >= 4 && values.motion >= 4) {
-    missionText.textContent = mt.depthAndMotion;
-  } else if (values.heritage >= 5 && values.depth >= 4) {
-    missionText.textContent = mt.heritageAndDepth;
-  } else if (values.motion <= 2) {
-    missionText.textContent = mt.lowMotion;
-  } else {
-    missionText.textContent = mt.default;
-  }
-}
-
-moodInputs.forEach((input) => input.addEventListener("input", updateMission));
-
-/* ============================================================
-   GALLERY TABS
-   ============================================================ */
-
-const galleryTabs = document.querySelectorAll(".gallery-tabs button");
-const galleryCopy = document.querySelector("#gallery-copy");
-
-galleryTabs.forEach((button) => {
-  button.addEventListener("click", () => {
-    const detail = galleryData[button.dataset.gallery];
-    if (!detail) return;
-
-    galleryTabs.forEach((tab) => {
-      tab.classList.remove("is-active");
-      tab.setAttribute("aria-selected", "false");
-    });
-    button.classList.add("is-active");
-    button.setAttribute("aria-selected", "true");
-    galleryCopy.textContent = detail[currentLang].copy;
-  });
-});
 
 /* ============================================================
    LANGUAGE TOGGLE BUTTON

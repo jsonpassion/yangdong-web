@@ -30,7 +30,6 @@
       </a>
       <nav class="site-nav" aria-label="주요 섹션">
         <a href="#context" data-i18n="nav-context">배경</a>
-        <a href="#program" data-i18n="nav-program">프로그램</a>
         <a href="#apply" data-i18n="nav-apply">신청</a>
       </nav>
       <div class="header-right">
@@ -160,112 +159,10 @@
         </div>
       </section>
 
-      <section id="program" class="program section-anchor" aria-labelledby="program-title">
-        <div class="section-heading" data-reveal>
-          <div class="section-kicker">
-            <span>03</span>
-            <p data-i18n="program-kicker">프로그램</p>
-          </div>
-          <h2 id="program-title" data-i18n="program-h2">배우고, 걷고, 남기는 프로그램</h2>
-          <p data-i18n="program-lead">각 활동은 다음 활동의 재료가 되도록 설계했습니다.</p>
-        </div>
-
-        <div class="program-grid" aria-label="프로그램 목록">
-          <button class="program-card is-selected" type="button" data-program="shoot" data-reveal>
-            <span class="program-index">01</span>
-            <strong data-i18n="prog-shoot-title">촬영 감각 맞추기</strong>
-            <small data-i18n="prog-shoot-sub">Spatial photo &amp; video tips</small>
-          </button>
-          <button class="program-card" type="button" data-program="walk" data-reveal>
-            <span class="program-index">02</span>
-            <strong data-i18n="prog-walk-title">마을 산책 챌린지</strong>
-            <small data-i18n="prog-walk-sub">Capture the Yangdong moment</small>
-          </button>
-          <button class="program-card" type="button" data-program="share" data-reveal>
-            <span class="program-index">03</span>
-            <strong data-i18n="prog-share-title">공유 갤러리</strong>
-            <small data-i18n="prog-share-sub">Review and collect scenes</small>
-          </button>
-          <button class="program-card" type="button" data-program="talk" data-reveal>
-            <span class="program-index">04</span>
-            <strong data-i18n="prog-talk-title">앱 라이트닝 토크</strong>
-            <small data-i18n="prog-talk-sub">Three-minute recommendations</small>
-          </button>
-        </div>
-
-        <div class="program-detail" data-reveal>
-          <div>
-            <p class="detail-label" id="program-label">Spatial photo &amp; video tips</p>
-            <h3 id="program-heading">공간감은 거리와 움직임에서 시작됩니다.</h3>
-            <p id="program-copy">
-              촬영 전에 피사체와의 거리, 사람의 움직임, 앞뒤 레이어를 확인합니다. 짧은
-              체크인으로 참가자 간 기본 감각을 맞춥니다.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="challenge section-anchor" aria-labelledby="challenge-title">
-        <div class="challenge-copy" data-reveal>
-          <div class="section-kicker">
-            <span>04</span>
-            <p data-i18n="challenge-kicker">현장 챌린지</p>
-          </div>
-          <h2 id="challenge-title" data-i18n="challenge-h2">"가장 양동마을다운 순간"을 고르는 기준</h2>
-          <p data-i18n="challenge-lead">
-            좋은 공간 콘텐츠는 멋진 피사체 하나보다 장면 사이의 관계를 잘 드러냅니다.
-            참가자는 아래 감각을 조합해 자신의 산책 미션을 정합니다.
-          </p>
-        </div>
-        <div class="challenge-lab" data-reveal>
-          <label>
-            <span data-i18n="mood-depth">깊이감</span>
-            <input type="range" min="1" max="5" value="4" data-mood="depth" />
-          </label>
-          <label>
-            <span data-i18n="mood-heritage">마을성</span>
-            <input type="range" min="1" max="5" value="5" data-mood="heritage" />
-          </label>
-          <label>
-            <span data-i18n="mood-motion">사람의 움직임</span>
-            <input type="range" min="1" max="5" value="3" data-mood="motion" />
-          </label>
-          <div class="mission-output" aria-live="polite">
-            <span data-i18n="mission-label">추천 미션</span>
-            <strong id="mission-text">골목의 깊이와 처마선 사이로 사람이 지나가는 순간을 담아보세요.</strong>
-          </div>
-        </div>
-      </section>
-
-      <section class="gallery section-anchor" aria-labelledby="gallery-title">
-        <div class="gallery-copy" data-reveal>
-          <div class="section-kicker">
-            <span>05</span>
-            <p data-i18n="gallery-kicker">결과물</p>
-          </div>
-          <h2 id="gallery-title" data-i18n="gallery-h2">행사 이후에도 남는 하나의 커뮤니티 프로젝트</h2>
-          <p id="gallery-copy" data-i18n="gallery-copy-album">
-            첫 결과물은 공유 앨범으로 시작하고, 다음 회차에는 간단한 웹앱 또는 공간 콘텐츠
-            아카이브로 확장할 수 있습니다.
-          </p>
-          <div class="gallery-tabs" role="tablist" aria-label="결과물 형태">
-            <button class="is-active" type="button" role="tab" aria-selected="true" data-gallery="album" data-i18n="tab-album">
-              Shared album
-            </button>
-            <button type="button" role="tab" aria-selected="false" data-gallery="app" data-i18n="tab-app">
-              Mini app
-            </button>
-            <button type="button" role="tab" aria-selected="false" data-gallery="archive" data-i18n="tab-archive">
-              Spatial archive
-            </button>
-          </div>
-        </div>
-      </section>
-
       <section class="guide section-anchor" aria-labelledby="guide-title">
         <div class="section-heading" data-reveal>
           <div class="section-kicker">
-            <span>06</span>
+            <span>03</span>
             <p data-i18n="guide-kicker">운영 가이드</p>
           </div>
           <h2 id="guide-title" data-i18n="guide-h2">당일을 준비하는 체크리스트</h2>
@@ -293,7 +190,7 @@
       <section id="apply" class="apply section-anchor" aria-labelledby="apply-title">
         <div class="section-heading" data-reveal>
           <div class="section-kicker">
-            <span>07</span>
+            <span>04</span>
             <p data-i18n="apply-kicker">참가 신청</p>
           </div>
           <h2 id="apply-title" data-i18n="apply-h2">지금 신청하세요.</h2>
