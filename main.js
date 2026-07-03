@@ -67,6 +67,18 @@ const translations = {
     "flow-step4-copy":
       "가장 잘 활용하는 앱 하나씩을 소개하고, 다음 커뮤니티 프로젝트로 확장할 아이디어를 모읍니다.",
 
+    /* guide */
+    "guide-kicker": "운영 가이드",
+    "guide-h2": "당일을 준비하는 체크리스트",
+    "guide-item1-title": "집합",
+    "guide-item1-body": "행사 당일 집합 장소와 시간은 신청 완료 후 안내 메일로 전달됩니다.",
+    "guide-item2-title": "지참",
+    "guide-item2-body": "Vision Pro 본체와 충전 케이블, 야외 이동이 편한 신발. 배터리 풀 충전 권장.",
+    "guide-item3-title": "공유 앨범",
+    "guide-item3-body": "참가 확정 후 공유 앨범 초대 링크를 발송합니다. 당일 촬영 전 수락 부탁드립니다.",
+    "guide-item4-title": "마을 예절",
+    "guide-item4-body": "양동마을은 주민이 실거주하는 세계유산 마을입니다. 사유지와 주거 공간은 조용히 존중해주세요.",
+
     /* apply */
     "apply-kicker": "참가 신청",
     "apply-h2": "지금 신청하세요.",
@@ -130,12 +142,24 @@ const translations = {
     "flow-step4-copy":
       "Each person recommends one app they use best. Gather the seeds for the next community project.",
 
+    /* guide */
+    "guide-kicker": "Operations Guide",
+    "guide-h2": "Day-of checklist",
+    "guide-item1-title": "Meetup",
+    "guide-item1-body": "Meeting location and time will be sent by email after your registration is confirmed.",
+    "guide-item2-title": "What to bring",
+    "guide-item2-body": "Vision Pro and charging cable, comfortable shoes for outdoor walking. Full battery charge recommended.",
+    "guide-item3-title": "Shared album",
+    "guide-item3-body": "A shared album invite will be sent after registration. Please accept before shooting starts on the day.",
+    "guide-item4-title": "Village etiquette",
+    "guide-item4-body": "Yangdong is a UNESCO World Heritage village with residents living there. Please respect private land and residential areas quietly.",
+
     /* apply */
     "apply-kicker": "Apply",
     "apply-h2": "Apply now.",
     "apply-lead":
       "If you're interested in visionOS, Vision Pro, or spatial content, you're welcome to join.",
-      
+
     /* footer */
     "footer-title": "Dive into Spatial Experiences: Yangdong Village",
     "footer-top": "Back to top",
@@ -306,7 +330,6 @@ function setLanguage(lang) {
       programLabel.textContent = d.label;
       programHeading.textContent = d.heading;
       programCopy.textContent = d.copy;
-      programImage.alt = d.alt;
     }
   }
 
@@ -317,7 +340,6 @@ function setLanguage(lang) {
     const detail = galleryData[key];
     if (detail) {
       galleryCopy.textContent = detail[lang].copy;
-      galleryImage.alt = detail[lang].alt;
     }
   }
 
@@ -421,7 +443,6 @@ const programButtons = document.querySelectorAll(".program-card");
 const programLabel = document.querySelector("#program-label");
 const programHeading = document.querySelector("#program-heading");
 const programCopy = document.querySelector("#program-copy");
-const programImage = document.querySelector("#program-image");
 
 programButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -435,8 +456,6 @@ programButtons.forEach((button) => {
     programLabel.textContent = d.label;
     programHeading.textContent = d.heading;
     programCopy.textContent = d.copy;
-    programImage.src = detail.image;
-    programImage.alt = d.alt;
   });
 });
 
@@ -473,7 +492,6 @@ moodInputs.forEach((input) => input.addEventListener("input", updateMission));
 
 const galleryTabs = document.querySelectorAll(".gallery-tabs button");
 const galleryCopy = document.querySelector("#gallery-copy");
-const galleryImage = document.querySelector("#gallery-image");
 
 galleryTabs.forEach((button) => {
   button.addEventListener("click", () => {
@@ -487,30 +505,6 @@ galleryTabs.forEach((button) => {
     button.classList.add("is-active");
     button.setAttribute("aria-selected", "true");
     galleryCopy.textContent = detail[currentLang].copy;
-    galleryImage.src = detail.image;
-    galleryImage.alt = detail[currentLang].alt;
-  });
-});
-
-/* ============================================================
-   ASSET COPY BUTTONS
-   ============================================================ */
-
-const assetButtons = document.querySelectorAll("[data-copy]");
-assetButtons.forEach((button) => {
-  button.addEventListener("click", async () => {
-    const value = button.dataset.copy;
-    try {
-      await navigator.clipboard.writeText(value);
-      button.classList.add("copied");
-      button.textContent = "copied";
-      window.setTimeout(() => {
-        button.classList.remove("copied");
-        button.textContent = value.split("/").at(-1);
-      }, 1200);
-    } catch {
-      button.textContent = value;
-    }
   });
 });
 
