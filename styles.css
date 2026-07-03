@@ -594,13 +594,12 @@ html[data-lang="en"] .lang-opt[data-opt="en"] {
 .orb-core {
   width: 34%;
   aspect-ratio: 1;
-  border: 1px solid rgba(255, 255, 255, 0.26);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 50%;
   background:
-    radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.78), transparent 8%),
-    radial-gradient(circle, rgba(120, 214, 244, 0.44), rgba(150, 197, 173, 0.18) 60%, transparent 70%);
+    radial-gradient(circle, rgba(120, 214, 244, 0.38), rgba(150, 197, 173, 0.14) 60%, transparent 70%);
   box-shadow:
-    inset 0 0 42px rgba(255, 255, 255, 0.18),
+    inset 0 0 42px rgba(255, 255, 255, 0.1),
     0 0 70px rgba(120, 214, 244, 0.28);
   animation: orbPulse 4s ease-in-out infinite;
 }
@@ -631,6 +630,13 @@ html[data-lang="en"] .lang-opt[data-opt="en"] {
   animation: rotateC 17s linear infinite;
 }
 
+.orbit-d {
+  width: 76%;
+  transform: translate(-50%, -50%) rotateX(58deg) rotateZ(200deg);
+  border-color: rgba(150, 197, 173, 0.25);
+  animation: rotateD 19s linear infinite;
+}
+
 .orbit-dot {
   width: 11px;
   height: 11px;
@@ -655,6 +661,12 @@ html[data-lang="en"] .lang-opt[data-opt="en"] {
   color: var(--vermillion);
   background: var(--vermillion);
   animation: dotOrbitC 17s linear infinite;
+}
+
+.dot-d {
+  color: var(--celadon);
+  background: var(--celadon);
+  animation: dotOrbitD 19s linear infinite;
 }
 
 .flow-steps {
@@ -976,6 +988,9 @@ input[type="range"] {
 @keyframes rotateC {
   to { transform: translate(-50%, -50%) rotateX(72deg) rotateZ(318deg); }
 }
+@keyframes rotateD {
+  to { transform: translate(-50%, -50%) rotateX(58deg) rotateZ(560deg); }
+}
 
 /* 도트가 궤도 링을 따라 실제로 이동 */
 @keyframes dotOrbitA {
@@ -989,6 +1004,10 @@ input[type="range"] {
 @keyframes dotOrbitC {
   from { transform: translate(-50%, -50%) rotateX(72deg) rotateZ(-42deg) translateX(218px); }
   to   { transform: translate(-50%, -50%) rotateX(72deg) rotateZ(318deg) translateX(218px); }
+}
+@keyframes dotOrbitD {
+  from { transform: translate(-50%, -50%) rotateX(58deg) rotateZ(200deg) translateX(160px); }
+  to   { transform: translate(-50%, -50%) rotateX(58deg) rotateZ(560deg) translateX(160px); }
 }
 
 /* 행성 부유 */
