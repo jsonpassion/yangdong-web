@@ -367,6 +367,64 @@ document.addEventListener("visibilitychange", () => {
 });
 
 /* ============================================================
+   SPATIAL ORB — MOUSE PARALLAX TILT
+   ============================================================ */
+
+const spatialOrb = document.querySelector(".spatial-orb");
+if (spatialOrb) {
+  let tx = 0, ty = 0, cx = 0, cy = 0;
+
+  function lerpOrb() {
+    cx += (tx - cx) * 0.04;
+    cy += (ty - cy) * 0.04;
+    spatialOrb.style.transform = `rotateX(${cy}deg) rotateY(${cx}deg)`;
+    requestAnimationFrame(lerpOrb);
+  }
+
+  window.addEventListener("mousemove", (e) => {
+    const rect = spatialOrb.getBoundingClientRect();
+    const ox = rect.left + rect.width / 2;
+    const oy = rect.top + rect.height / 2;
+    tx = ((e.clientX - ox) / (window.innerWidth * 0.5)) * 14;
+    ty = -((e.clientY - oy) / (window.innerHeight * 0.5)) * 10;
+  }, { passive: true });
+
+  window.addEventListener("mouseleave", () => { tx = 0; ty = 0; });
+
+  lerpOrb();
+}
+
+/* ============================================================
+   SCROLL SNAP — 섹션 경계 근처에서 부드럽게 이동
+   ============================================================ */
+
+const snapSections = [...document.querySelectorAll(".section-anchor")];
+let snapTimer = null;
+let isSnapping = false;
+
+function nearestSection() {
+  const headerH = 52;
+  return snapSections.reduce((best, sec) => {
+    const d = Math.abs(sec.getBoundingClientRect().top - headerH);
+    return d < Math.abs(best.getBoundingClientRect().top - headerH) ? sec : best;
+  });
+}
+
+window.addEventListener("scroll", () => {
+  if (isSnapping) return;
+  clearTimeout(snapTimer);
+  snapTimer = setTimeout(() => {
+    const sec = nearestSection();
+    const dist = Math.abs(sec.getBoundingClientRect().top - 52);
+    if (dist > 8 && dist < 280) {
+      isSnapping = true;
+      sec.scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(() => { isSnapping = false; }, 900);
+    }
+  }, 120);
+}, { passive: true });
+
+/* ============================================================
    INIT
    ============================================================ */
 
